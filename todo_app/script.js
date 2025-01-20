@@ -14,7 +14,7 @@ const taskData = JSON.parse(localStorage.getItem("data")) || [];
 let currentTask = {};
 
 const removeSpecialChars = (val) => {
-  return val.trim().replace(/[^A-Za-z0-9\-\s]/g, '')//заменяет все не буквы A-Z a-z и цифры 0-9 и - на пустую строку ''
+  return val.trim().replace(/[^A-Za-z0-9\-\s]/g, '')
 }
 
 const addOrUpdateTask = () => {

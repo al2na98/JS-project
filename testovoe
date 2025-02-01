@@ -1,0 +1,122 @@
+1 задание 
+
+function getComputersString(number) {
+    const numberString = number.toString();
+    const lastDigit = number % 10;
+    const lastTwoDigits = number % 100;
+
+    let wordForm;
+
+    if (lastTwoDigits >= 11 && lastTwoDigits <= 19) {
+        wordForm = "компьютеров";
+    } else if (lastDigit === 1) {
+        wordForm = "компьютер";
+    } else if (lastDigit >= 2 && lastDigit <= 4) {
+        wordForm = "компьютера";
+    } else {
+        wordForm = "компьютеров";
+    }
+
+    return `${numberString} ${wordForm}`;
+}
+
+const userInput = prompt("Введите целое число:");
+const number = parseInt(userInput, 10);
+
+if (!isNaN(number)) {
+    console.log(getComputersString(number));
+} else {
+    console.log("Пожалуйста, введите корректное целое число.");
+}
+
+2 задание 
+
+function findCommonDivisors(numbers) {
+    const getDivisors = (num) => {
+        const divisors = [];
+        for (let i = 1; i <= num; i++) {
+            if (num % i === 0) {
+                divisors.push(i);
+            }
+        }
+        return divisors;
+    };
+
+    if (numbers.length === 0) return [];
+
+    let commonDivisors = getDivisors(numbers[0]);
+
+    for (let i = 1; i < numbers.length; i++) {
+        const divisors = getDivisors(numbers[i]);
+        commonDivisors = commonDivisors.filter(divisor => divisors.includes(divisor));
+    }
+
+    return commonDivisors;
+}
+
+const userInput = prompt("Введите положительные целые числа, разделенные запятыми:");
+const inputArray = userInput.split(',').map(Number).filter(num => num > 0);
+
+if (inputArray.length > 0) {
+    const result = findCommonDivisors(inputArray);
+    console.log(result);
+} else {
+    console.log("Пожалуйста, введите корректные положительные целые числа.");
+}
+
+3 задание
+
+function isPrime(num) {
+    if (num < 2) return false;
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+function findPrimesInRange(min, max) {
+    const primes = [];
+    for (let i = min; i <= max; i++) {
+        if (isPrime(i)) {
+            primes.push(i);
+        }
+    }
+    return primes;
+}
+
+const userInput = prompt("Введите два числа, разделенные запятой:");
+const inputArray = userInput.split(',').map(Number);
+
+if (inputArray.length === 2 && inputArray.every(num => !isNaN(num))) {
+    const min = Math.min(...inputArray);
+    const max = Math.max(...inputArray);
+    const result = findPrimesInRange(min, max);
+    console.log(result);
+} else {
+    console.log("Пожалуйста, введите два корректных числа, разделенных запятой.");
+}
+
+4 задание 
+
+function printMultiplicationTable(n) {
+    for (let i = 1; i <= n; i++) {
+        let row = '';
+        for (let j = 1; j <= n; j++) {
+            row += (i * j).toString().padStart(4, ' '); 
+        }
+        console.log(row);
+    }
+}
+
+const userInput = prompt("Введите число для вывода таблицы умножения:");
+const number = Number(userInput);
+
+if (!isNaN(number) && number > 0) {
+    printMultiplicationTable(number);
+} else {
+    console.log("Пожалуйста, введите корректное положительное число.");
+}
+
+

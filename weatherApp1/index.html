@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- фоновое изображение -->
+    <div class="page-bg"></div>
+
+    <!-- полупрозрачный контейнер -->
+    <main class="app-shell">
+      <!-- header -->
+      <header class="app-header">
+        <div class="logo">
+          <img
+            src="./components/weather_icons/Desktop & Tablet.png"
+            alt="logo"
+          />
+        </div>
+        <div class="search">
+
+          <input type="search" id="citySearch" placeholder="Поиск по городу" />
+          <img src="./components/weather_icons/search.png" alt="search" class="icon-search">
+          <!-- <img src="./components/weather_icons/close.png" alt="close" class="icon-close"> -->
+        </div>
+      </header>
+
+      <!-- основной контент -->
+      <section class="content">
+        <aside class="left">
+          <div class="city">Москва</div>
+          <div class="date">Суббота, 06 января • 11:29</div>
+          <div class="temperature">
+            <span class="temp-value">-7°</span>
+          </div>
+          <div class="more-temperature">
+            <div class="icon"></div>
+            <div class="feels">
+              Облачно<br /><small>Ощущается как -11°</small>
+            </div>
+          </div>
+        </aside>
+
+        <div class="right">
+          <div class="blocks"></div>
+          <div class="blocks"></div>
+          <div class="blocks"></div>
+          <div class="blocks"></div>
+          <div class="blocks"></div>
+          <div class="blocks"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

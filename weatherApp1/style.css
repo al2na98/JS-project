@@ -1,98 +1,98 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Raleway", sans-serif;
-    color: #F5F4F4;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  color: #f5f4f4;
 }
 
 body,
 html {
-    height: 100%;
-    background: url("/content.png") no-repeat center;
-    background-size: cover;
-    min-width: 1280px;
+  height: 100%;
+  background: url("/content.png") no-repeat center;
+  background-size: cover;
+  min-width: 1280px;
 }
 
 .page-bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  display: none;
 }
 
 .app-shell {
-    width: 80%;
-    height: 1200px;
-    margin: 2rem auto;
-    padding: 2rem;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(12px);
-    color: #fff;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  height: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  color: #fff;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
 }
 
 .app-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .logo img {
-    height: 48px;
-    width: 192px;
+  height: 48px;
+  width: 192px;
 }
 
 .app-header__search {
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 50%;
 }
 
 .app-header__search-label {
-    display: none;
+  display: none;
 }
 
 .app-header__search-input {
-    width: 100%;
-    border: none;
-    padding: 12px 16px;
-    outline: none;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(12px);
-    color: #202020;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    font-size: 20px;
-    border-radius: 8px;
+  width: 100%;
+  border: none;
+  padding: 12px 16px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  color: #202020;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+  border-radius: 8px;
 }
 
 .app-header__search-input::placeholder {
-    color: #707070;
-    opacity: 70%;
+  color: #707070;
+  opacity: 70%;
 }
 
 .search-icon {
-    position: absolute;
-    right: 10px;
-    width: 18px;
-    height: 18px;
-    pointer-events: none;
+  position: absolute;
+  right: 10px;
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
 }
 
 .main-content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .weather-current {
@@ -161,23 +161,6 @@ html {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 16px;
-}
-
-.weather-list__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-}
-
-.weather-list__item {
-  width: 158px;
-  height: 196px;
-  border-radius: 8px;
-  background: rgba(255,255,255,0.2);
-  backdrop-filter: blur(12px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 /* Адаптивность для экранов <1280px */

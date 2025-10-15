@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./components/styles/meteo-cards.css" />
   </head>
   <body>
     <!-- фоновое изображение -->
@@ -15,55 +16,57 @@
       <!-- header -->
       <header class="app-header">
         <div class="logo">
-          <img
-            src="./components/data_display/logo.png"
-            alt="logo"
-          />
+          <img src="./components/data_display/logo.png" alt="logo" />
         </div>
         <form class="app-header__search" role="search">
-          <label for="citySearch" class="app-header__search-label">Поиск по городу</label>
-          <input 
-            type="search" 
-            id="citySearch" 
-            class="app-header__search-input" 
-            placeholder="Введите город" 
+          <label for="citySearch" class="app-header__search-label"
+            >Поиск по городу</label
+          >
+          <input
+            type="search"
+            id="citySearch"
+            class="app-header__search-input"
+            placeholder="Введите город"
           />
-          <img src="./components/data_display/search.png" alt="search" class="search-icon" width="18" height="18">
+          <img
+            src="./components/data_display/search.png"
+            alt="search"
+            class="search-icon"
+            width="18"
+            height="18"
+          />
         </form>
       </header>
 
       <!-- основной контент -->
-       <div class="main-content">
-      <section class="weather-current">
-        <h1 class="weather-current__title">Прогноз погоды</h1>
-        <div class="weather-current__info">
-          <h2 class="weather-current__city">Москва</h2>
-          <time class="weather-current__date" datetime="2025-01-06">Суббота, 06 января</time>
-          <time class="weather-current__time" datetime="11:29">11:29</time>
-          <p class="weather-current__temp">-7°</p>
-          <div class="weather-current__details">
-            <img src="./components/weather_icons/clouds.png" alt="clouds" width="24" height="24">
-            <span class="weather-current__desc">Облачно</span>
-            <span class="weather-current__feels">Ощущается как -11°</span>
+      <div class="main-content">
+        <section class="weather-current">
+          <div class="weather-current__info">
+            <h1 class="weather-current__city">Москва</h1>
+            <time class="weather-current__date" datetime="2025-01-06"
+              >Суббота, 06 января</time
+            >
+            <time class="weather-current__time" datetime="11:29">11:29</time>
+            <p class="weather-current__temp">-7°</p>
+            <div class="weather-current__details">
+              <img
+                src="./components/weather_icons/clouds.png"
+                alt="clouds"
+                width="24"
+                height="24"
+              />
+              <span class="weather-current__desc">Облачно</span>
+              <span class="weather-current__feels">Ощущается как -11°</span>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
         <!-- Список городов -->
-      <section class="weather-list">
-        <h2 class="weather-list__title">Другие города</h2>
-        <div class="weather-list__grid">
-          <article class="weather-list__item"></article>
-          <article class="weather-list__item"></article>
-          <article class="weather-list__item"></article>
-          <article class="weather-list__item"></article>
-          <article class="weather-list__item"></article>
-          <article class="weather-list__item"></article>
-        </div>
-      </section>
+        <section id="meteo-root" class="weather-list"></section>
       </div>
     </main>
 
     <script src="app.js"></script>
+    <script src="js/meteo-cards.js"></script>
   </body>
 </html>
